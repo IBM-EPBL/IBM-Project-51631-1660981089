@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Crude Oil Price Prediction </title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/prediction.css') }}">
+</head>
+<body style="text-align:center">
+    <h1> C R U D E &nbsp; O I L &nbsp; P R I C E &nbsp; P R E D I C T I O N
+        <br>
+        <br>
+        <a href="{{url_for('homepage')}}"
+        style="border-radius: 20px;padding: 20px;width: 300px;color:rgb(255, 255, 255);font-family: roboto;
+       height: 100px;text-align: right;background: rgb(255, 185, 56); text-decoration: none;font-size: 20px;">
+       Homepage</a>
+       <a href="{{url_for('teampage')}}"
+        style="border-radius: 20px;padding: 20px;width: 300px;color:rgb(255, 255, 255);font-family: roboto;
+       height: 100px;text-align: right;background: rgb(255, 185, 56); text-decoration: none;font-size: 20px;">
+       Team Members</a>                              
+    </h1>
+    <br>
+    <br>
+    <br>
+    
+    <p > 
+        Enter the Oil price for 10 days </p>
+        <form action="/prediction" method="POST" enctype = "multipart/form-data">
+            <div style="color:rgb(2, 255, 2);font-size:50px;font-family:roboto;">
+                {{prediction}}
+            </div>
+        <input type="text" name="val" style="border-radius: 18px;padding: 20px;width: 300px;height: 15px;text-align: center; " >
+         <br> <br> <br>
+        <input type="submit"/ style="border-radius: 10px;;padding: 10px;width: 150px;
+        height: 40px;text-align: center;background: #ff6f00;color: white;">
+        &nbsp;
+        
+        <form action="/predict" method="GET" enctype = "multipart/form-data">
+        <input type="submit"/ value="Reset" style="border-radius: 10px;padding: 10px;width: 150px;
+        height: 40px;text-align: center;background: #ff6f00;color: white;">
+        </form>    
+</body>
